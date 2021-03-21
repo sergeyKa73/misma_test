@@ -15,6 +15,12 @@ ul li {list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 /*-----------*/
+h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+}
+
 .bb {
     border: 1px solid red;
 }
@@ -81,3 +87,117 @@ header .main-wrapper {
 }
 
 /* end header*/
+/* start main-board*/
+.main-board .main-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.main-board__left-block {
+    width: 50%;
+}
+
+.main-board .main-wrapper > img {
+    margin: auto;
+}
+
+.main-board {
+    background: url(src/bg.jpg);
+    height: 500px;
+    background-position: 50% -50px;
+    background-size: cover;
+    position: relative;
+}
+
+.main-board::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(33, 42, 73, 0.6);
+        z-index: 1;
+}
+
+.main-board-item {
+    color: #FFFFFF;
+    padding: 25px 0 0 30px;
+    margin-bottom: 35px;
+    position: relative;
+}
+.main-board .main-board-item::before {
+    content: "";
+    width: 115px;
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    background: #00D5C3;
+}
+
+.main-board .main-board-item::after {
+    background: #00D5C3;
+    content: "";
+    height: 115px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 5px;
+}
+
+.main-board__left-block > div:first-of-type {
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+
+.main-board__left-block > div:last-of-type {
+    display: flex;
+}
+    
+.main-board__button-link:first-of-type {
+    margin-right: 20px;
+}
+
+.main-board__button-link {
+    display: flex;
+    align-items: center;
+    width: 165px;
+    height: 50px;
+    border: 1px solid #00D5C3;
+    font-size: 18px;
+    border-radius: 0 5px 0 5px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 12px;
+    transition-duration: 0.3s;
+}
+
+.main-board__button-link > i {
+    margin-left: 20px;
+    margin-right: 15px;
+    font-size: 30px;
+    color: #00D5C3;
+    width: 26px;
+    transition-duration: 0.3s;
+}
+
+.main-board__button-link_bold {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.main-board__button-link:hover {
+    background: #00D5C3;
+}
+
+.main-board__button-link:hover > i {
+    color: #FFFFFF;
+}
+/* end main-board*/
