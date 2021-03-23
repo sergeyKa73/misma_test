@@ -15,19 +15,49 @@ ul li {list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
 /*-----------*/
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
 h1 {
     font-size: 48px;
     font-weight: 600;
     line-height: 58px;
 }
 
-.bb {
-    border: 1px solid red;
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #444444;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
+h2 > span {
+    position: relative;
 }
+
+h2 > span::after{
+    content: "";
+    height: 2px;
+    background: #444444;
+    width: 40%;
+    margin-left: -20%;
+    left: 50%;
+    top:120%;
+    position: absolute;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.services, .works, .team, .blog, .contact, footer {
+    padding: 60px 0;
+}
+
 /* start header*/
 header {
     height: 65px;
@@ -201,3 +231,81 @@ header .main-wrapper {
     color: #FFFFFF;
 }
 /* end main-board*/
+/* start services*/
+.services__block-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.services__item {
+    padding: 30px;
+    flex: 0 0 32%;
+    text-align: center;
+    transition-duration: 0.3s;
+    border-radius: 5px;
+}
+
+.services__item:hover {
+    box-shadow: 0 5px 25px 0 rgba(5, 5, 5, 0.2);
+}
+
+.box-icon {
+    border: 1px solid #161C35;
+    border-radius: 50%;
+    height: 108px;
+    line-height: 108px;
+    text-align: center;
+    width: 108px;
+    margin: 0 auto;
+    transition-duration: 0.3s;
+}
+
+.box-icon > i {
+    font-size: 54px;
+    color: #161C35;
+    line-height: 108px;
+    transition-duration: 0.3s;
+}
+
+.services__item:hover .box-icon {
+    background: #161C35;
+}
+
+.services__item:hover .box-icon > i {
+    color: #FFFFFF;
+}
+
+.services__item > h3 {
+    margin:23px 0;
+    color: #161C35;
+    text-align: center;
+}
+
+.services__item > p {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: #666666;
+}
+
+.services__item > a {
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    color: #161C35;
+    font-size: 18px;
+    border-radius: 0 5px 0 5px;
+    border: 1px solid #161C35;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+.services__item > a:hover {
+    background: #161C35;
+    color: #FFFFFF;
+}
+/*end services*/
